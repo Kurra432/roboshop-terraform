@@ -7,6 +7,10 @@ resource "aws_instance" "frontend" {
   }
 }
 
+output "forntend" {
+  value = "aws_instance.forntend.public_ip"
+}
+
 resource "aws_instance" "mongodb" {
   ami           = "ami-0b4f379183e5706b9"
   instance_type = "t3.micro"
